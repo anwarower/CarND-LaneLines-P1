@@ -32,7 +32,6 @@ The calculation of the unified lane line has been achieved by two different ways
 This method has been used when no history is available yet from previous frames. In this case, the lines have been split using their slopes to right and left candidates respectively. Afterwards, for each side, the parameters of all the candidates have been averaged together to form the unified edge. This method is implemented in `get_averaged_line(side, lines)`.  
 
 ###### * Line Prediction and Projection  
-[comment]: <> (![alt text][image1])
 In case enough frames have been already processed and a stable history is available, a heuristic has been used that expects the new output to be pretty close to the previous output. Using the function `get_best_twin(side, lines)`, the closest Hough line found is chosen, that fits best the history.
 
 
